@@ -6,13 +6,12 @@ use App\Models\Scopes\StoreScope;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
-
 
 class Product extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'name', 'slug', 'description', 'image', 'category_id', 'store_id',
         'price', 'compare_price', 'status',
@@ -27,11 +26,10 @@ class Product extends Model
         'image_url',
     ];
 
-
-    //  Global Scopes
     protected static function booted()
     {
         static::addGlobalScope('store', new StoreScope());
+
         static::creating(function (Product $product) {
             $product->slug = Str::slug($product->name);
         });
@@ -39,7 +37,6 @@ class Product extends Model
 
     public function category()
     {
-        // this->belongsTo(Category::class, 'FK in Product', 'Onwer Key in Category');
         return $this->belongsTo(Category::class, 'category_id', 'id');
     }
 
@@ -59,7 +56,6 @@ class Product extends Model
             'id'            // PK related model
         );
     }
-
 
     public function scopeActive(Builder $builder)
     {

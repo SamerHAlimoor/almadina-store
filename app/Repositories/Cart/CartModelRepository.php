@@ -7,7 +7,8 @@ use App\Models\Product;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Str;
 
 class CartModelRepository implements CartRepository
 {
@@ -23,7 +24,7 @@ class CartModelRepository implements CartRepository
         if (!$this->items->count()) {
             $this->items = Cart::with('product')->get();
         }
-
+        // dd($this->items);
         return $this->items;
     }
 
@@ -71,12 +72,14 @@ class CartModelRepository implements CartRepository
             ->value('total');
 */
 
+        // dd($this->get());
+
         return $this->get()->sum(function ($item) {
             return $item->quantity * $item->product->price;
         });
     }
 
-    /* public function getCookieId()
+    public function getCookieId()
     {
         $cookie_id = Cookie::get('cart_id');
         if ($cookie_id) {
@@ -84,5 +87,5 @@ class CartModelRepository implements CartRepository
             Cookie::queue('cart_id', $cookie_id, 30 * 24 * 60);
         }
         return $cookie_id;
-    }*/
+    }
 }
