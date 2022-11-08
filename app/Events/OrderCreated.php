@@ -10,6 +10,7 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
 
 class OrderCreated
 {
@@ -25,6 +26,7 @@ class OrderCreated
     public function __construct(Order $order)
     {
         $this->order = $order;
+        Log::info("Notification Event");
     }
 
     /**
