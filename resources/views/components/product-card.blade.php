@@ -9,13 +9,13 @@
         <span class="new-tag">New</span>
         @endif
         <div class="button">
-            <a href="{{route('products.show',$product->slug)}}" class="btn"><i class="lni lni-cart"></i> Show</a>
+            <a href="{{route('product.show',$product->slug)}}" class="btn"><i class="lni lni-cart"></i> Show</a>
         </div>
     </div>
     <div class="product-info">
         <span class="category">{{ $product->category->name }}</span>
         <h4 class="title">
-            <a href="{{route('products.show',$product->slug)}}">{{ $product->name }}</a>
+            <a href="{{route('product.show',$product->slug)}}">{{ $product->name }}</a>
         </h4>
         <ul class="review">
             @for ($i = 1; $i <= 5; $i++)

@@ -6,8 +6,8 @@ use App\Events\OrderCreated;
 use App\Models\User;
 use App\Notifications\OrderCreatedNotification;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Notification as NotificationsNotification;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Log;
 
@@ -35,19 +35,22 @@ class SendOrderCreatedNotification
         //$store = $event->order->store;
         $order = $event->order;
 
+        Log::info("Order" . $order);
 
+        /*
+        $user = DB::table('users')->where('store_id', '=', $order->store_id)->first();
+        Log::info("user" . $user);
 
-        $user = User::where('store_id', $order->store_id)->first();
-        // dd($user);
         if ($user) {
-            // $user->notifyNow(new OrderCreatedNotification($order));
+            $user->notify(new OrderCreatedNotification($order));
             Log::info("Notification  Before Sent");
 
-            Notification::sendNow($user, new OrderCreatedNotification($order));
+            // Notification::($user, new OrderCreatedNotification($order));
         }
-        Log::info("Notification Sent");
-        /*
+        
+        */
         $users = User::where('store_id', $order->store_id)->get();
-        Notification::send($users, new OrderCreatedNotification($order));*/
+        Notification::send($users, new OrderCreatedNotification($order));
+        Log::info("Notification Sent");
     }
 }

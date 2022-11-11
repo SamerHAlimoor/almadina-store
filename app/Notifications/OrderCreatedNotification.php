@@ -4,6 +4,7 @@ namespace App\Notifications;
 
 use App\Models\Order;
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
@@ -33,15 +34,15 @@ class OrderCreatedNotification extends Notification
      */
     public function via($notifiable)
     {
-        Log::info("Via");
+        // Log::info("Via");
         /*
 
  لتحديد اسم القناة اللي بدك تبعت عن طريقها الرسالة 
 
 
         */
-        return ['mail', 'database'];
-        /*
+        return ['database', 'broadcast', 'mail'];
+
         $channels = ['database'];
         if ($notifiable->notification_preferences['order_created']['sms'] ?? false) {
             $channels[] = 'vonage';
@@ -52,7 +53,7 @@ class OrderCreatedNotification extends Notification
         if ($notifiable->notification_preferences['order_created']['broadcast'] ?? false) {
             $channels[] = 'broadcast';
         }
-        return $channels;*/
+        return $channels;
     }
 
     /**
@@ -72,7 +73,7 @@ class OrderCreatedNotification extends Notification
             ->line("A new order (#{$this->order->number}) created by {$addr->name} from {$addr->country_name}.")
             ->action('View Order', url('/dashboard'))
             ->line('Thank you for using our application!');
-        Log::info("toMail");
+        // Log::info("toMail" . $notifiable);
     }
 
     public function toDatabase($notifiable)
@@ -85,19 +86,22 @@ class OrderCreatedNotification extends Notification
             'url' => url('/dashboard'),
             'order_id' => $this->order->id,
         ];
-        Log::info("toDatabase");
+        //Log::info("toDatabase");
     }
+
 
     public function toBroadcast($notifiable)
     {
+
         $addr = $this->order->billingAddress;
+        Log::info("Notification Sent to pusher" . $addr);
         return new BroadcastMessage([
             'body' => "A new order (#{$this->order->number}) created by {$addr->name} from {$addr->country_name}.",
             'icon' => 'fas fa-file',
             'url' => url('/dashboard'),
             'order_id' => $this->order->id,
         ]);
-        Log::info("toBroadcast");
+        //
     }
 
 

@@ -40,6 +40,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\UpdateUserLastActiveAt::class,
 
 
+
         ],
 
         'api' => [

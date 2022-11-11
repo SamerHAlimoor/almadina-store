@@ -79,6 +79,7 @@ class CheckoutController extends Controller
             DB::commit();
             //event('order.created');
             //event('order.created', $order, Auth::user());
+            //   OrderCreated::dispatch($order)
             event(new OrderCreated($order));
         } catch (Throwable $e) {
             DB::rollBack();

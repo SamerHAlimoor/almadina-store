@@ -10,8 +10,9 @@ class ProductsController extends Controller
 {
     //
 
-    public function index()
+    public function index(Request $request)
     {
+        return $request;
     }
 
     public function show(Product $product)

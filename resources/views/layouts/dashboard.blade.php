@@ -18,7 +18,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @stack('css')
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
-   
+    <script>
+        const userID={{ Auth::user()->id }};
+    </script>
+       
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -127,32 +130,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 </li>
                 <!-- Notifications Dropdown Menu -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link" data-toggle="dropdown" href="#">
-                        <i class="far fa-bell"></i>
-                        <span class="badge badge-warning navbar-badge">15</span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <span class="dropdown-header">15 Notifications</span>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-envelope mr-2"></i> 4 new messages
-                            <span class="float-right text-muted text-sm">3 mins</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-users mr-2"></i> 8 friend requests
-                            <span class="float-right text-muted text-sm">12 hours</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
-                            <i class="fas fa-file mr-2"></i> 3 new reports
-                            <span class="float-right text-muted text-sm">2 days</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-                    </div>
-                </li>
+                <x-dashboard.notification-menu/>
+
+                                <!-- Notifications Dropdown Menu -->
+
+              
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                         <i class="fas fa-expand-arrows-alt"></i>
@@ -229,13 +211,35 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap 4 -->
     <script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  
     <!-- AdminLTE App -->
     @stack('js')
-
+    
     <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
 
-    <!-- Add Js -->
+    <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+    <script>
+  
+      // Enable pusher logging - don't include this in production
+      Pusher.logToConsole = true;
+  
+      var pusher = new Pusher('7c6af2b0bc7ec399cdbe', {
+        cluster: 'mt1'
+      });
+  
+      var channel = pusher.subscribe(`App.Models.User.${userID}`);
+      channel.bind('App\\Events\\OrderCreated', function(data) {
+        console.log(data.message);
+        alert(JSON.stringify(data));
+      });
+    </script>
+
     
+    @stack('scripts')
+   
+   
+
+
 </body>
 
 </html>
