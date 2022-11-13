@@ -20,6 +20,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
     <script>
         const userID={{ Auth::user()->id }};
+        const userName={{ Auth::user()->name }};
     </script>
        
 </head>
@@ -229,8 +230,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   
       var channel = pusher.subscribe(`App.Models.User.${userID}`);
       channel.bind('App\\Events\\OrderCreated', function(data) {
-        console.log(data.message);
-        alert(JSON.stringify(data));
+        console.log(data);
+        //"Hello Dear".data['order']['user_id']."Your ID #".data['order']['number']."and your store is:".data['order']['store_id'])
+        //"Hello Dear".JSON.stringify(data['order']['user_id'])."Your ID #".JSON.stringify(data['order']['number'])."and your store is:".JSON.stringify(data['order']['store_id'])
+        alert(`A new order #${data.order.number}  Created By:${userName}`);
       });
     </script>
 

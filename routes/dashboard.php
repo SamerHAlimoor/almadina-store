@@ -9,7 +9,7 @@ use App\Http\Middleware\CheckUserType;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-    'middleware' => ['auth:web', 'auth.type:admin,super-admin'],
+    'middleware' => ['auth:admin'],
     'as' => 'dashboard.', // for name نفس فكرة الاسم يعني  = ->name('dashboard.categories.index')
     'prefix' => 'admin/dashboard', // this for prefix
     //'namespace' => 'App\Http\Controllers\Dashboard',
