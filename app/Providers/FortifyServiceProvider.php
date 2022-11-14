@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Contracts\LoginResponse;
 use Laravel\Fortify\Contracts\LogoutResponse;
+use Laravel\Fortify\Contracts\TwoFactorLoginResponse;
 use Laravel\Fortify\Fortify;
 
 class FortifyServiceProvider extends ServiceProvider
@@ -46,6 +47,14 @@ class FortifyServiceProvider extends ServiceProvider
         });
 
         $this->app->instance(LogoutResponse::class, new class implements LogoutResponse
+        {
+            public function toResponse($request)
+            {
+                return redirect('/');
+            }
+        });
+
+        $this->app->instance(TwoFactorLoginResponse::class, new class implements TwoFactorLoginResponse
         {
             public function toResponse($request)
             {

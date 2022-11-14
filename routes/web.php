@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Front\AuthFortify\TwoFactorAuthentication;
 use App\Http\Controllers\Front\CartController;
 use App\Http\Controllers\Front\CheckoutController;
 use App\Http\Controllers\Front\HomeController;
@@ -53,7 +54,8 @@ Route::get('/product/{product:slug}', [ProductsController::class, 'show'])
 Route::post('checkout/create-payment', [PaymentsController::class, 'store'])
     ->name('checkout.payment');
 
-
+Route::get('auth/user/2fa', [TwoFactorAuthentication::class, 'index'])
+    ->name('front.2fa');
 
 // require __DIR__ . '/auth.php';
 require __DIR__ . '/dashboard.php';

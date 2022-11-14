@@ -21,8 +21,10 @@
                                     <label for="reg-fn">2FA Code</label>
                                     <input class="form-control" type="text" name="code" id="reg-code">
                                 </div>
+
                                 <div class="form-group input-group">
-                                    <label for="reg-fn">Recovery Code</label>
+                                                                        <label for="reg-fn">Or Enter Recovery Code</label>
+
                                     <input class="form-control" type="text" name="recovery_code" id="reg-recovery_code">
                                 </div>
                                 <div class="button">
