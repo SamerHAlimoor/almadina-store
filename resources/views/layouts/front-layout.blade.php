@@ -49,7 +49,7 @@
                             <ul class="menu-top-link">
                                 <li>
                                     <div class="select-position">
-                                        <form action="" method="post">
+                                        <form action="{{route('currency.store')}}" method="post">
                                             @csrf
                                             <select name="currency_code" onchange="this.form.submit()">
                                                 <option value="USD" @selected('USD' == session('currency_code'))>$ USD</option>

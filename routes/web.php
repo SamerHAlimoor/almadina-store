@@ -3,6 +3,7 @@
 use App\Http\Controllers\Front\AuthFortify\TwoFactorAuthentication;
 use App\Http\Controllers\Front\CartController;
 use App\Http\Controllers\Front\CheckoutController;
+use App\Http\Controllers\Front\CurrencyConvertController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\PaymentController;
 use App\Http\Controllers\Front\PaymentsController;
@@ -53,7 +54,8 @@ Route::get('/product/{product:slug}', [ProductsController::class, 'show'])
     ->name('product.show');
 Route::post('checkout/create-payment', [PaymentsController::class, 'store'])
     ->name('checkout.payment');
-
+Route::post('currency', [CurrencyConvertController::class, 'store'])
+    ->name('currency.store');
 Route::get('auth/user/2fa', [TwoFactorAuthentication::class, 'index'])
     ->name('front.2fa');
 
