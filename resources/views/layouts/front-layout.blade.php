@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>{{ $title }}</title>
+    <title>{{trans('app.name')}}</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('front/assets/images/favicon.svg') }}" />
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('front/assets/css/tiny-slider.css') }}" />
     <link rel="stylesheet" href="{{ asset('front/assets/css/glightbox.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('front/assets/css/main.css') }}" />
+    
     @stack('styles')
 </head>
 
@@ -52,24 +53,26 @@
                                         <form action="{{route('currency.store')}}" method="post">
                                             @csrf
                                             <select name="currency_code" onchange="this.form.submit()">
-                                                <option value="USD" @selected('USD' == session('currency_code'))>$ USD</option>
-                                                <option value="EUR" @selected('EUR' == session('currency_code'))>€ EURO</option>
-                                                <option value="ILS" @selected('ILS' == session('currency_code'))>$ ILS</option>
-                                                <option value="JOD" @selected('JOD' == session('currency_code'))>₹ JOD</option>
-                                                <option value="SAR" @selected('SAR' == session('currency_code'))>¥ SAR</option>
-                                                <option value="QAR" @selected('QAR' == session('currency_code'))>৳ QAR</option>
+                                                <option value="USD" @selected('USD' == session('currency_code'))>{{trans('currency.USD')}}</option>
+                                                <option value="EUR" @selected('EUR' == session('currency_code'))>{{trans('currency.EUR')}}</option>
+                                                <option value="ILS" @selected('ILS' == session('currency_code'))>{{trans('currency.ILS')}}</option>
+                                                <option value="JOD" @selected('JOD' == session('currency_code'))>{{trans('currency.JOD')}}</option>
+                                                <option value="SAR" @selected('SAR' == session('currency_code'))>{{trans('currency.SAR')}}</option>
+                                                <option value="QAR" @selected('QAR' == session('currency_code'))>{{trans('currency.QAR')}}</option>
                                             </select>
                                         </form>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="select-position">
-                                        <form action="{{ URL::current() }}" method="get">
-                                            <select name="locale" onchange="this.form.submit()">
-                                                
-                                            </select>
-                                        </form>
-                                    </div>
+                                        <ul>
+                                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                                <li>
+                                                    <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                        {{ $properties['native'] }}
+                                                    </a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
                                 </li>
                             </ul>
                         </div>
@@ -77,9 +80,9 @@
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="top-middle">
                             <ul class="useful-links">
-                                <li><a href="index.html">ddd</a></li>
-                                <li><a href="about-us.html">@lang('About Us')</a></li>
-                                <li><a href="contact.html">{{ __('Contact Us') }}</a></li>
+                                <li><a href="{{route('home_page')}}">{{trans('app.home')}}</a></li>
+                                <li><a href="#">@lang('app.about')</a></li>
+                                <li><a href="#">{{ __('app.contact') }}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -125,7 +128,7 @@
                     <div class="col-lg-3 col-md-3 col-7">
                         <!-- Start Header Logo -->
                         <a class="navbar-brand" href="{{ route('home_page') }}">
-                            <span class="brand-text font-weight-light">Al-Madina Market</span>
+                            <span class="brand-text font-weight-light">{{trans('app.name')}}</span>
 
                         </a>
                         <!-- End Header Logo -->

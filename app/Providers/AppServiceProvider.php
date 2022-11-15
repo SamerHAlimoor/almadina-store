@@ -6,6 +6,8 @@ use App\Http\Resources\ProductResource;
 use App\Services\CurrencyConverter;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator;
 
@@ -31,7 +33,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
         //
+        // $locale = request('locale', Cookie::get('locale', config('locale')));
+        // App::setlocale(request('locale', config('locale')));
+        // Cookie::queue('locale', $locale, 60 * 24 * 365);
         ProductResource::withoutWrapping();
 
         Validator::extend('filter', function ($attribute, $value, $params) {
