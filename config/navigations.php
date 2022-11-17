@@ -20,7 +20,7 @@ return [
         'active' => 'dashboard.products.*',
         'ability' => 'products.view',
         'create_route' => 'dashboard.products.create',
-        'trash' => 'dashboard.products.create'
+        'trash' => 'dashboard.categories.trash'
 
     ],
     [
@@ -34,11 +34,11 @@ return [
     ],
     [
         'icon' => 'nav-icon fas fa-code',
-        'route' => 'dashboard.dashboard',
+        'route' => 'dashboard.roles.index',
         'title' => 'Roles',
         'active' => 'dashboard.roles.*',
         'ability' => 'roles.view',
-        'create_route' => 'dashboard.dashboard',
+        'create_route' => 'dashboard.roles.create',
         'trash' => 'dashboard.categories.trash'
     ],
     [

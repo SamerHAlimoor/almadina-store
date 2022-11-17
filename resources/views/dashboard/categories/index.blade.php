@@ -67,12 +67,14 @@
                         </td>
                         <td>{{ $category->created_at }}</td>
                         <td>
-                            
+                            @can('categories.update')
                             <a href="{{ route('dashboard.categories.edit', $category->id) }}" class="btn btn-sm btn-outline-success">Edit</a>
+
+                            @endcan
                             
                         </td>
                         <td>
-                           
+                          @can('categories.delete')
                             <form action="{{ route('dashboard.categories.destroy', $category->id) }}" method="post">
                                 @csrf
                                 <!-- Form Method Spoofing -->
@@ -80,7 +82,7 @@
                                 @method('delete')
                                 <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
                             </form>
-                            
+                            @endcan
                         </td>
                     </tr>
                     @empty

@@ -66,9 +66,13 @@
                       <td>{{ $product->status }}</td>
                       <td>{{ $product->created_at }}</td>
                       <td>
+                        @can('products.update')
                           <a href="{{ route('dashboard.products.edit', $product->id) }}" class="btn btn-sm btn-outline-success">Edit</a>
-                      </td>
+                          @endcan
+                        </td>
+                      
                       <td>
+                        @can('products.delete')
                           <form action="{{ route('dashboard.products.destroy', $product->id) }}" method="post">
                               @csrf
                               <!-- Form Method Spoofing -->
@@ -76,6 +80,7 @@
                               @method('delete')
                               <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
                           </form>
+                          @endcan
                       </td>
                   </tr>
                   @empty

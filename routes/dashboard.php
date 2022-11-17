@@ -5,6 +5,7 @@ use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\ImportProductController;
 use App\Http\Controllers\Dashboard\ProductsController;
 use App\Http\Controllers\Dashboard\ProfileController;
+use App\Http\Controllers\Dashboard\RolesContorller;
 use App\Http\Middleware\CheckUserType;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,7 @@ Route::group([
     Route::resources([
         'products' => ProductsController::class,
         'categories' => CategoryController::class,
+        'roles' => RolesContorller::class,
 
     ]);
 });

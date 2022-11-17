@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Gate;
 
 class CategoryRequest extends FormRequest
 {
@@ -12,7 +13,11 @@ class CategoryRequest extends FormRequest
 
     public function authorize()
     {
-        return true;
+        if ($this->route('category')) {
+            return  Gate::allows('categories.update');
+        } else {
+            return  Gate::allows('categories.create');
+        }
     }
 
 
@@ -23,7 +28,7 @@ class CategoryRequest extends FormRequest
      */
     public function rules()
     {
-        $id = $this->route('category');
+        $id = $this->route('category'); // this get parameter in my link as this parameter name is category
         return [
             'name' => [
                 'required', 'string', 'min:4', 'max:255', 'unique:categories,name,' . $id,

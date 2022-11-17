@@ -20,9 +20,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        /* if (!Gate::allows('categories.view')) {
+        if (!Gate::allows('categories.view')) {
             abort(403);
-        }*/
+        }
         //
         $request = request();  // يعني لو فيه بيانات بدك اياهم من الget بجيبهم الك من هاي الفنكشن
         $q = Category::query();
@@ -52,7 +52,9 @@ class CategoryController extends Controller
     public function create()
     {
 
-
+        if (Gate::denies('categories.create')) {
+            abort(403);
+        }
         $parents = Category::all();
         $category = new Category(); // هاي حيلة حتي انه في انشاء الكاتيجوري يبعت  واحد فاضي لانه في حالة التعديل بنبعت اله هاد الصنف حتي يعرضهم في التعديل
         return view('dashboard.categories.create', compact('category', 'parents'));
@@ -67,6 +69,8 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         // Request merge
+
+        Gate::authorize('categories.store');
 
         $request->validate(Category::rules($request->id), [
             'required' => 'This :attribute is Require',
@@ -111,6 +115,9 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
+        if (Gate::denies('categories.show')) {
+            abort(403);
+        }
         //
         //$category = Category::findOrFail($id);
         // dd($category);
@@ -126,6 +133,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
+        Gate::authorize('categories.update');
         //
         $category = Category::findOrFail($id);
         //return $category->products;
@@ -151,6 +159,7 @@ class CategoryController extends Controller
      */
     public function update(CategoryRequest $request, $id)
     {
+
         //
         // return $request;
         /*$clean_date =  $request->validate(Category::rules($id), [
@@ -188,6 +197,8 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
+        Gate::authorize('categories.delete');
+
         //
         //$category = Category::findOrFail($id);
         $category->delete();

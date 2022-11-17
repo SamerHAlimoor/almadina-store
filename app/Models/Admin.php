@@ -12,6 +12,7 @@ class Admin extends User
 {
     use HasFactory,
         Notifiable,
+        HasRoles,
         HasApiTokens;
 
     protected $fillable = [
