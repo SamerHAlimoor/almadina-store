@@ -28,4 +28,19 @@ return [
     'roles.delete' => 'Delete roles',
     'roles.restore' => 'Resotre roles',
     'roles.force-delete' => 'Force delete roles',
+
+    'users.view' => 'View users',
+    'users.create' => 'Create users',
+    'users.update' => 'Update users',
+    'users.delete' => 'Delete users',
+    'users.restore' => 'Resotre users',
+    'users.force-delete' => 'Force delete users',
+
+    'admins.view' => 'View admins',
+    'admins.create' => 'Create admins',
+    'admins.update' => 'Update admins',
+    'admins.delete' => 'Delete admins',
+    'admins.restore' => 'Resotre admins',
+    'admins.force-delete' => 'Force delete admins',
+
 ];

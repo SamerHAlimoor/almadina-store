@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\Dashboard\AdminsController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\ImportProductController;
 use App\Http\Controllers\Dashboard\ProductsController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\RolesContorller;
+use App\Http\Controllers\Dashboard\UsersController;
 use App\Http\Middleware\CheckUserType;
 use Illuminate\Support\Facades\Route;
 
@@ -37,11 +39,13 @@ Route::group([
         ->name('products.import');
     Route::post('products/import', [ImportProductController::class, 'store']);
 
+    
 
     Route::resources([
         'products' => ProductsController::class,
         'categories' => CategoryController::class,
         'roles' => RolesContorller::class,
-
+        'users' => UsersController::class,
+        'admins' => AdminsController::class,
     ]);
 });

@@ -43,20 +43,20 @@ return [
     ],
     [
         'icon' => 'fas fa-users nav-icon',
-        'route' => 'dashboard.categories.index',
+        'route' => 'dashboard.users.index',
         'title' => 'Users',
         'active' => 'dashboard.users.*',
         'ability' => 'users.view',
-        'create_route' => 'dashboard.categories.index',
+        'create_route' => 'dashboard.users.index',
         'trash' => 'dashboard.categories.trash'
     ],
     [
         'icon' => 'fas fa-users nav-icon',
-        'route' => 'dashboard.categories.index',
+        'route' => 'dashboard.admins.index',
         'title' => 'Admins',
         'active' => 'dashboard.admins.*',
         'ability' => 'admins.view',
-        'create_route' => 'dashboard.categories.index',
+        'create_route' => 'dashboard.admins.index',
         'trash' => 'dashboard.categories.trash'
     ],
 
