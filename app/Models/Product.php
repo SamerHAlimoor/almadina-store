@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Scopes\StoreScope;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -31,7 +32,9 @@ class Product extends Model
         static::addGlobalScope('store', new StoreScope());
 
         static::creating(function (Product $product) {
-            $product->slug = Str::slug($product->name);
+            $current_time = Carbon::now()->toDateTimeString();
+
+            $product->slug = Str::slug($product->name) . $current_time;
         });
     }
 

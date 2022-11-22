@@ -1,0 +1,1513 @@
+{
+	"info": {
+		"_postman_id": "505fe312-706c-401d-9d85-c318324e3712",
+		"name": "Al-Madina Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "All Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "dOFBzBfLfCTISUw6xYM0XOwH3s8dxwXfSHtC1JpTtX4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}products",
+							"host": [
+								"{{host}}products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{host}}products?category_id=34",
+									"host": [
+										"{{host}}products"
+									],
+									"query": [
+										{
+											"key": "category_id",
+											"value": "34",
+											"description": "fillter by category ID"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 19:41:17 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 19:41:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 115,\n            \"store_id\": 16,\n            \"category_id\": 34,\n            \"name\": \"Rustic Wool Watch\",\n            \"slug\": \"rustic-wool-watch\",\n            \"description\": \"Voluptatem voluptatem impedit voluptas nihil corporis commodi provident quos dolores dolorem accusantium.\",\n            \"price\": 308.5,\n            \"compare_price\": 547.6,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00cccc?text=quia\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 16,\n                \"name\": \"error iusto\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 128,\n            \"store_id\": 19,\n            \"category_id\": 34,\n            \"name\": \"Intelligent Bronze Lamp\",\n            \"slug\": \"intelligent-bronze-lamp\",\n            \"description\": \"Ut cupiditate repellat exercitationem autem non sit dicta voluptas exercitationem.\",\n            \"price\": 390.1,\n            \"compare_price\": 992.8,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00ffaa?text=commodi\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 132,\n            \"store_id\": 20,\n            \"category_id\": 34,\n            \"name\": \"Rustic Cotton Bottle\",\n            \"slug\": \"rustic-cotton-bottle\",\n            \"description\": \"Iure sequi esse enim dolor tempora est nesciunt est molestias.\",\n            \"price\": 314,\n            \"compare_price\": 773.8,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00ffcc?text=repudiandae\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 20,\n                \"name\": \"incidunt aut\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 137,\n            \"store_id\": 19,\n            \"category_id\": 34,\n            \"name\": \"Enormous Bronze Bench\",\n            \"slug\": \"enormous-bronze-bench\",\n            \"description\": \"Soluta atque voluptatem nisi a ipsum quasi aspernatur ut non suscipit odio consequatur voluptatibus.\",\n            \"price\": 371.1,\n            \"compare_price\": 915.1,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/004400?text=non\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 140,\n            \"store_id\": 20,\n            \"category_id\": 34,\n            \"name\": \"Ergonomic Aluminum Gloves\",\n            \"slug\": \"ergonomic-aluminum-gloves\",\n            \"description\": \"Sequi voluptates magni itaque debitis deserunt sit tempore aut commodi nulla consequatur eaque qui nobis tempora sapiente reprehenderit occaecati.\",\n            \"price\": 302.8,\n            \"compare_price\": 979.1,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00bb88?text=voluptas\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 20,\n                \"name\": \"incidunt aut\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 165,\n            \"store_id\": 18,\n            \"category_id\": 34,\n            \"name\": \"Ergonomic Concrete Hat\",\n            \"slug\": \"ergonomic-concrete-hat\",\n            \"description\": \"Sunt eos sed vitae deleniti nihil labore at nam qui porro est cumque optio velit.\",\n            \"price\": 247.1,\n            \"compare_price\": 861,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/008888?text=cum\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 18,\n                \"name\": \"tenetur dolores\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 171,\n            \"store_id\": 16,\n            \"category_id\": 34,\n            \"name\": \"Rustic Linen Gloves\",\n            \"slug\": \"rustic-linen-gloves\",\n            \"description\": \"Iste debitis harum nobis alias quo aliquam iure magni rerum voluptatem doloremque cum ut aut odio in et vel cupiditate sint.\",\n            \"price\": 465,\n            \"compare_price\": 960.7,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/006644?text=vel\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 16,\n                \"name\": \"error iusto\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 177,\n            \"store_id\": 19,\n            \"category_id\": 34,\n            \"name\": \"Fantastic Leather Bottle\",\n            \"slug\": \"fantastic-leather-bottle\",\n            \"description\": \"Error qui ratione ut consequuntur voluptate assumenda commodi et porro minus labore a consequatur necessitatibus nisi quaerat ad quae culpa.\",\n            \"price\": 370.9,\n            \"compare_price\": 688.9,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/0055aa?text=quam\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 198,\n            \"store_id\": 20,\n            \"category_id\": 34,\n            \"name\": \"Durable Wooden Bottle\",\n            \"slug\": \"durable-wooden-bottle\",\n            \"description\": \"Quis placeat quae cum nostrum ipsa quia odit rerum omnis voluptate laborum voluptas corrupti eligendi.\",\n            \"price\": 211.7,\n            \"compare_price\": 518.6,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/0088bb?text=aliquid\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 20,\n                \"name\": \"incidunt aut\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 203,\n            \"store_id\": 16,\n            \"category_id\": 34,\n            \"name\": \"Rustic Wooden Clock\",\n            \"slug\": \"rustic-wooden-clock\",\n            \"description\": \"Porro beatae similique suscipit assumenda accusantium maiores quae voluptatem nihil aspernatur aut dolorum rem qui totam et similique cupiditate quia dolores.\",\n            \"price\": 348.1,\n            \"compare_price\": 954.2,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/0011ee?text=voluptas\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 16,\n                \"name\": \"error iusto\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 205,\n            \"store_id\": 19,\n            \"category_id\": 34,\n            \"name\": \"Durable Concrete Wallet\",\n            \"slug\": \"durable-concrete-wallet\",\n            \"description\": \"Modi voluptatem itaque minus tempore voluptatum consequatur quod eligendi qui eveniet velit assumenda libero occaecati quidem voluptatem accusamus et repellat.\",\n            \"price\": 460.5,\n            \"compare_price\": 717.5,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/007766?text=beatae\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        }\n    ],\n    \"first_page_url\": \"http://127.0.0.1:8000/api/products?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://127.0.0.1:8000/api/products?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/products?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://127.0.0.1:8000/api/products\",\n    \"per_page\": 15,\n    \"prev_page_url\": null,\n    \"to\": 11,\n    \"total\": 11\n}"
+						},
+						{
+							"name": "All Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}products",
+									"host": [
+										"{{host}}products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 20:02:18 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 20:02:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 112,\n            \"store_id\": 18,\n            \"category_id\": 38,\n            \"name\": \"Synergistic Rubber Computer\",\n            \"slug\": \"synergistic-rubber-computer\",\n            \"description\": \"A dolore vitae in a consequuntur molestiae non rerum enim non in numquam reiciendis totam et temporibus quidem aut sequi.\",\n            \"price\": 9.2,\n            \"compare_price\": 910.8,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/0077ee?text=libero\",\n            \"category\": {\n                \"id\": 38,\n                \"name\": \"Industrial\"\n            },\n            \"store\": {\n                \"id\": 18,\n                \"name\": \"tenetur dolores\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"sika\",\n                    \"pivot\": {\n                        \"product_id\": 112,\n                        \"tag_id\": 1\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"name\": \"moka\",\n                    \"pivot\": {\n                        \"product_id\": 112,\n                        \"tag_id\": 2\n                    }\n                },\n                {\n                    \"id\": 3,\n                    \"name\": \"tiga\",\n                    \"pivot\": {\n                        \"product_id\": 112,\n                        \"tag_id\": 3\n                    }\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"poka\",\n                    \"pivot\": {\n                        \"product_id\": 112,\n                        \"tag_id\": 4\n                    }\n                },\n                {\n                    \"id\": 10,\n                    \"name\": \"sika2\",\n                    \"pivot\": {\n                        \"product_id\": 112,\n                        \"tag_id\": 10\n                    }\n                },\n                {\n                    \"id\": 11,\n                    \"name\": \"sika3\",\n                    \"pivot\": {\n                        \"product_id\": 112,\n                        \"tag_id\": 11\n                    }\n                },\n                {\n                    \"id\": 12,\n                    \"name\": \"sika4\",\n                    \"pivot\": {\n                        \"product_id\": 112,\n                        \"tag_id\": 12\n                    }\n                },\n                {\n                    \"id\": 13,\n                    \"name\": \"dfdgd\",\n                    \"pivot\": {\n                        \"product_id\": 112,\n                        \"tag_id\": 13\n                    }\n                },\n                {\n                    \"id\": 14,\n                    \"name\": \"dgdsgfs\",\n                    \"pivot\": {\n                        \"product_id\": 112,\n                        \"tag_id\": 14\n                    }\n                },\n                {\n                    \"id\": 15,\n                    \"name\": \"rgrgrg\",\n                    \"pivot\": {\n                        \"product_id\": 112,\n                        \"tag_id\": 15\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 113,\n            \"store_id\": 18,\n            \"category_id\": 30,\n            \"name\": \"Mediocre Paper Table\",\n            \"slug\": \"mediocre-paper-table\",\n            \"description\": \"Id tenetur est vel sapiente facere perferendis vitae saepe cum modi est quisquam illo laboriosam et.\",\n            \"price\": 74.9,\n            \"compare_price\": 649.3,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/0022bb?text=dolorem\",\n            \"category\": {\n                \"id\": 30,\n                \"name\": \"Beauty & Kids\"\n            },\n            \"store\": {\n                \"id\": 18,\n                \"name\": \"tenetur dolores\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"sika\",\n                    \"pivot\": {\n                        \"product_id\": 113,\n                        \"tag_id\": 1\n                    }\n                },\n                {\n                    \"id\": 16,\n                    \"name\": \"Mediocre Paper Table\",\n                    \"pivot\": {\n                        \"product_id\": 113,\n                        \"tag_id\": 16\n                    }\n                },\n                {\n                    \"id\": 17,\n                    \"name\": \"sffgv\",\n                    \"pivot\": {\n                        \"product_id\": 113,\n                        \"tag_id\": 17\n                    }\n                },\n                {\n                    \"id\": 18,\n                    \"name\": \"frgfgrf\",\n                    \"pivot\": {\n                        \"product_id\": 113,\n                        \"tag_id\": 18\n                    }\n                },\n                {\n                    \"id\": 19,\n                    \"name\": \"rgawe\",\n                    \"pivot\": {\n                        \"product_id\": 113,\n                        \"tag_id\": 19\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 114,\n            \"store_id\": 16,\n            \"category_id\": 32,\n            \"name\": \"Fantastic Plastic Lamp\",\n            \"slug\": \"fantastic-plastic-lamp\",\n            \"description\": \"Cupiditate officiis et qui id ut nemo impedit sapiente qui unde odit et quis in dolore sunt consectetur molestiae molestias et.\",\n            \"price\": 170.6,\n            \"compare_price\": 838.3,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/0099ee?text=aut\",\n            \"category\": {\n                \"id\": 32,\n                \"name\": \"Automotive\"\n            },\n            \"store\": {\n                \"id\": 16,\n                \"name\": \"error iusto\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 115,\n            \"store_id\": 16,\n            \"category_id\": 34,\n            \"name\": \"Rustic Wool Watch\",\n            \"slug\": \"rustic-wool-watch\",\n            \"description\": \"Voluptatem voluptatem impedit voluptas nihil corporis commodi provident quos dolores dolorem accusantium.\",\n            \"price\": 308.5,\n            \"compare_price\": 547.6,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://www.incathlab.com/images/products/default_product.png\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 16,\n                \"name\": \"error iusto\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 116,\n            \"store_id\": 19,\n            \"category_id\": 31,\n            \"name\": \"Aerodynamic Iron Computer\",\n            \"slug\": \"aerodynamic-iron-computer\",\n            \"description\": \"Porro qui voluptatum eos fugiat neque autem temporibus quasi eum culpa ex et impedit consequuntur minus et unde quibusdam pariatur deleniti.\",\n            \"price\": 237.7,\n            \"compare_price\": 826.9,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/004488?text=harum\",\n            \"category\": {\n                \"id\": 31,\n                \"name\": \"Baby & Books\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 117,\n            \"store_id\": 20,\n            \"category_id\": 33,\n            \"name\": \"Mediocre Leather Coat\",\n            \"slug\": \"mediocre-leather-coat\",\n            \"description\": \"Et laborum aut facilis inventore quis minima consequatur tempora sed dolor aliquam soluta quam perspiciatis non deserunt excepturi.\",\n            \"price\": 464.3,\n            \"compare_price\": 763.4,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00aaee?text=delectus\",\n            \"category\": {\n                \"id\": 33,\n                \"name\": \"Beauty & Electronics\"\n            },\n            \"store\": {\n                \"id\": 20,\n                \"name\": \"incidunt aut\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 118,\n            \"store_id\": 19,\n            \"category_id\": 37,\n            \"name\": \"Rustic Aluminum Clock\",\n            \"slug\": \"rustic-aluminum-clock\",\n            \"description\": \"Quo quo voluptatem quod eos nulla eos eaque fuga et voluptatibus vel architecto unde.\",\n            \"price\": 345.4,\n            \"compare_price\": 744.5,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/001177?text=vel\",\n            \"category\": {\n                \"id\": 37,\n                \"name\": \"Garden, Kids & Electronics\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 119,\n            \"store_id\": 18,\n            \"category_id\": 35,\n            \"name\": \"Fantastic Linen Hat\",\n            \"slug\": \"fantastic-linen-hat\",\n            \"description\": \"Sapiente placeat neque quaerat voluptate temporibus quae atque rerum fuga sit eaque rerum fuga sit quaerat ipsam et.\",\n            \"price\": 144,\n            \"compare_price\": 504.3,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/004477?text=quis\",\n            \"category\": {\n                \"id\": 35,\n                \"name\": \"Books\"\n            },\n            \"store\": {\n                \"id\": 18,\n                \"name\": \"tenetur dolores\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 120,\n            \"store_id\": 16,\n            \"category_id\": 36,\n            \"name\": \"Synergistic Plastic Computer\",\n            \"slug\": \"synergistic-plastic-computer\",\n            \"description\": \"Rerum quidem placeat ipsum iusto quas quae quae quo voluptate delectus est nihil perferendis.\",\n            \"price\": 153.2,\n            \"compare_price\": 614.7,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00dd88?text=suscipit\",\n            \"category\": {\n                \"id\": 36,\n                \"name\": \"Garden & Health\"\n            },\n            \"store\": {\n                \"id\": 16,\n                \"name\": \"error iusto\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 121,\n            \"store_id\": 19,\n            \"category_id\": 30,\n            \"name\": \"Heavy Duty Silk Table\",\n            \"slug\": \"heavy-duty-silk-table\",\n            \"description\": \"Consequatur est aut laboriosam eum sint quos facere quasi voluptatibus ab nulla qui temporibus est ad aut numquam dolorum.\",\n            \"price\": 223.7,\n            \"compare_price\": 914.5,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://www.incathlab.com/images/products/default_product.png\",\n            \"category\": {\n                \"id\": 30,\n                \"name\": \"Beauty & Kids\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 122,\n            \"store_id\": 18,\n            \"category_id\": 30,\n            \"name\": \"Incredible Silk Hat\",\n            \"slug\": \"incredible-silk-hat\",\n            \"description\": \"Inventore non debitis vitae laboriosam nemo omnis aut a assumenda rerum quia enim omnis quaerat architecto et voluptatem id unde.\",\n            \"price\": 202,\n            \"compare_price\": 932.4,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00dd33?text=fugit\",\n            \"category\": {\n                \"id\": 30,\n                \"name\": \"Beauty & Kids\"\n            },\n            \"store\": {\n                \"id\": 18,\n                \"name\": \"tenetur dolores\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 123,\n            \"store_id\": 20,\n            \"category_id\": 39,\n            \"name\": \"Heavy Duty Cotton Table\",\n            \"slug\": \"heavy-duty-cotton-table\",\n            \"description\": \"Molestiae dolorem voluptate consequatur tempore harum est hic quibusdam sapiente voluptas laboriosam debitis porro dolore ea sapiente.\",\n            \"price\": 178.7,\n            \"compare_price\": 861.3,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00ddee?text=voluptatem\",\n            \"category\": {\n                \"id\": 39,\n                \"name\": \"Clothing\"\n            },\n            \"store\": {\n                \"id\": 20,\n                \"name\": \"incidunt aut\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 124,\n            \"store_id\": 18,\n            \"category_id\": 36,\n            \"name\": \"Lightweight Plastic Car\",\n            \"slug\": \"lightweight-plastic-car\",\n            \"description\": \"Ut itaque laudantium non ab sit similique eaque sit quis consequuntur commodi voluptatem.\",\n            \"price\": 233.2,\n            \"compare_price\": 794.2,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00ff22?text=praesentium\",\n            \"category\": {\n                \"id\": 36,\n                \"name\": \"Garden & Health\"\n            },\n            \"store\": {\n                \"id\": 18,\n                \"name\": \"tenetur dolores\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 125,\n            \"store_id\": 18,\n            \"category_id\": 39,\n            \"name\": \"Fantastic Plastic Clock\",\n            \"slug\": \"fantastic-plastic-clock\",\n            \"description\": \"Et aut et autem rem et voluptatem at expedita accusamus id.\",\n            \"price\": 262.6,\n            \"compare_price\": 900.7,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/003322?text=necessitatibus\",\n            \"category\": {\n                \"id\": 39,\n                \"name\": \"Clothing\"\n            },\n            \"store\": {\n                \"id\": 18,\n                \"name\": \"tenetur dolores\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 126,\n            \"store_id\": 18,\n            \"category_id\": 35,\n            \"name\": \"Lightweight Plastic Shirt\",\n            \"slug\": \"lightweight-plastic-shirt\",\n            \"description\": \"Laborum eum molestiae mollitia voluptates exercitationem totam consequatur est nobis unde dolorem a fuga.\",\n            \"price\": 144.5,\n            \"compare_price\": 530.5,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/0099aa?text=consequatur\",\n            \"category\": {\n                \"id\": 35,\n                \"name\": \"Books\"\n            },\n            \"store\": {\n                \"id\": 18,\n                \"name\": \"tenetur dolores\"\n            },\n            \"tags\": []\n        }\n    ],\n    \"first_page_url\": \"http://127.0.0.1:8000/api/products?page=1\",\n    \"from\": 1,\n    \"last_page\": 7,\n    \"last_page_url\": \"http://127.0.0.1:8000/api/products?page=7\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/products?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/products?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/products?page=3\",\n            \"label\": \"3\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/products?page=4\",\n            \"label\": \"4\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/products?page=5\",\n            \"label\": \"5\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/products?page=6\",\n            \"label\": \"6\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/products?page=7\",\n            \"label\": \"7\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/products?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"http://127.0.0.1:8000/api/products?page=2\",\n    \"path\": \"http://127.0.0.1:8000/api/products\",\n    \"per_page\": 15,\n    \"prev_page_url\": null,\n    \"to\": 15,\n    \"total\": 99\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{api_key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{api_key_inHeader}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{host}}products?category_id=35",
+							"host": [
+								"{{host}}products"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "35",
+									"description": "fillter by category ID"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{host}}products/113",
+									"host": [
+										"{{host}}products"
+									],
+									"path": [
+										"113"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 07:33:55 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 07:33:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 113,\n        \"name\": \"Mediocre Paper Table\",\n        \"price\": {\n            \"normal\": 74.9,\n            \"compare\": 649.3\n        },\n        \"description\": \"Id tenetur est vel sapiente facere perferendis vitae saepe cum modi est quisquam illo laboriosam et.\",\n        \"image\": \"https://via.placeholder.com/600x600.png/0022bb?text=dolorem\",\n        \"relations\": {\n            \"category\": {\n                \"id\": 30,\n                \"name\": \"Beauty & Kids\"\n            },\n            \"store\": {\n                \"id\": 18,\n                \"name\": \"tenetur dolores\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|b8TCPPoGtWmE4vYcJ116MlUbroA4O0cvWO9dd9cB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{host}}products/119",
+							"host": [
+								"{{host}}products"
+							],
+							"path": [
+								"119"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{host}}products/112",
+									"host": [
+										"{{host}}products"
+									],
+									"path": [
+										"112"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 20:40:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 20:40:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product deleted successfully\"\n}"
+						},
+						{
+							"name": "Delete Unauthenticated",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "id",
+											"value": "120",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}products/120",
+									"host": [
+										"{{host}}products"
+									],
+									"path": [
+										"120"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "120",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:27:19 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:27:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+						},
+						{
+							"name": "Delete Product Auth",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{host}}products/119",
+									"host": [
+										"{{host}}products"
+									],
+									"path": [
+										"119"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:33:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:33:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Product",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|Z1swVj2SFecK29V0ALW5wphgKSl7ZiNiXywYbWNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{api_key_inHeader}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "IPhone 16",
+									"description": "Req",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "37",
+									"description": "Req",
+									"type": "text"
+								},
+								{
+									"key": "store_id",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "699",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}products",
+							"host": [
+								"{{host}}products"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products?category_id=34",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "category_id",
+											"value": "34",
+											"description": "fillter by category ID"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 19:41:17 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 19:41:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": 115,\n            \"store_id\": 16,\n            \"category_id\": 34,\n            \"name\": \"Rustic Wool Watch\",\n            \"slug\": \"rustic-wool-watch\",\n            \"description\": \"Voluptatem voluptatem impedit voluptas nihil corporis commodi provident quos dolores dolorem accusantium.\",\n            \"price\": 308.5,\n            \"compare_price\": 547.6,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00cccc?text=quia\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 16,\n                \"name\": \"error iusto\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 128,\n            \"store_id\": 19,\n            \"category_id\": 34,\n            \"name\": \"Intelligent Bronze Lamp\",\n            \"slug\": \"intelligent-bronze-lamp\",\n            \"description\": \"Ut cupiditate repellat exercitationem autem non sit dicta voluptas exercitationem.\",\n            \"price\": 390.1,\n            \"compare_price\": 992.8,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00ffaa?text=commodi\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 132,\n            \"store_id\": 20,\n            \"category_id\": 34,\n            \"name\": \"Rustic Cotton Bottle\",\n            \"slug\": \"rustic-cotton-bottle\",\n            \"description\": \"Iure sequi esse enim dolor tempora est nesciunt est molestias.\",\n            \"price\": 314,\n            \"compare_price\": 773.8,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00ffcc?text=repudiandae\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 20,\n                \"name\": \"incidunt aut\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 137,\n            \"store_id\": 19,\n            \"category_id\": 34,\n            \"name\": \"Enormous Bronze Bench\",\n            \"slug\": \"enormous-bronze-bench\",\n            \"description\": \"Soluta atque voluptatem nisi a ipsum quasi aspernatur ut non suscipit odio consequatur voluptatibus.\",\n            \"price\": 371.1,\n            \"compare_price\": 915.1,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/004400?text=non\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 140,\n            \"store_id\": 20,\n            \"category_id\": 34,\n            \"name\": \"Ergonomic Aluminum Gloves\",\n            \"slug\": \"ergonomic-aluminum-gloves\",\n            \"description\": \"Sequi voluptates magni itaque debitis deserunt sit tempore aut commodi nulla consequatur eaque qui nobis tempora sapiente reprehenderit occaecati.\",\n            \"price\": 302.8,\n            \"compare_price\": 979.1,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/00bb88?text=voluptas\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 20,\n                \"name\": \"incidunt aut\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 165,\n            \"store_id\": 18,\n            \"category_id\": 34,\n            \"name\": \"Ergonomic Concrete Hat\",\n            \"slug\": \"ergonomic-concrete-hat\",\n            \"description\": \"Sunt eos sed vitae deleniti nihil labore at nam qui porro est cumque optio velit.\",\n            \"price\": 247.1,\n            \"compare_price\": 861,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/008888?text=cum\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 18,\n                \"name\": \"tenetur dolores\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 171,\n            \"store_id\": 16,\n            \"category_id\": 34,\n            \"name\": \"Rustic Linen Gloves\",\n            \"slug\": \"rustic-linen-gloves\",\n            \"description\": \"Iste debitis harum nobis alias quo aliquam iure magni rerum voluptatem doloremque cum ut aut odio in et vel cupiditate sint.\",\n            \"price\": 465,\n            \"compare_price\": 960.7,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/006644?text=vel\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 16,\n                \"name\": \"error iusto\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 177,\n            \"store_id\": 19,\n            \"category_id\": 34,\n            \"name\": \"Fantastic Leather Bottle\",\n            \"slug\": \"fantastic-leather-bottle\",\n            \"description\": \"Error qui ratione ut consequuntur voluptate assumenda commodi et porro minus labore a consequatur necessitatibus nisi quaerat ad quae culpa.\",\n            \"price\": 370.9,\n            \"compare_price\": 688.9,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/0055aa?text=quam\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 198,\n            \"store_id\": 20,\n            \"category_id\": 34,\n            \"name\": \"Durable Wooden Bottle\",\n            \"slug\": \"durable-wooden-bottle\",\n            \"description\": \"Quis placeat quae cum nostrum ipsa quia odit rerum omnis voluptate laborum voluptas corrupti eligendi.\",\n            \"price\": 211.7,\n            \"compare_price\": 518.6,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/0088bb?text=aliquid\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 20,\n                \"name\": \"incidunt aut\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 203,\n            \"store_id\": 16,\n            \"category_id\": 34,\n            \"name\": \"Rustic Wooden Clock\",\n            \"slug\": \"rustic-wooden-clock\",\n            \"description\": \"Porro beatae similique suscipit assumenda accusantium maiores quae voluptatem nihil aspernatur aut dolorum rem qui totam et similique cupiditate quia dolores.\",\n            \"price\": 348.1,\n            \"compare_price\": 954.2,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 0,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/0011ee?text=voluptas\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 16,\n                \"name\": \"error iusto\"\n            },\n            \"tags\": []\n        },\n        {\n            \"id\": 205,\n            \"store_id\": 19,\n            \"category_id\": 34,\n            \"name\": \"Durable Concrete Wallet\",\n            \"slug\": \"durable-concrete-wallet\",\n            \"description\": \"Modi voluptatem itaque minus tempore voluptatum consequatur quod eligendi qui eveniet velit assumenda libero occaecati quidem voluptatem accusamus et repellat.\",\n            \"price\": 460.5,\n            \"compare_price\": 717.5,\n            \"quantity\": 0,\n            \"options\": null,\n            \"rating\": 0,\n            \"featured\": 1,\n            \"status\": \"active\",\n            \"image_url\": \"https://via.placeholder.com/600x600.png/007766?text=beatae\",\n            \"category\": {\n                \"id\": 34,\n                \"name\": \"Electronics\"\n            },\n            \"store\": {\n                \"id\": 19,\n                \"name\": \"accusamus qui\"\n            },\n            \"tags\": []\n        }\n    ],\n    \"first_page_url\": \"http://127.0.0.1:8000/api/products?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://127.0.0.1:8000/api/products?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://127.0.0.1:8000/api/products?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://127.0.0.1:8000/api/products\",\n    \"per_page\": 15,\n    \"prev_page_url\": null,\n    \"to\": 11,\n    \"total\": 11\n}"
+						},
+						{
+							"name": "Add Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "IPhone 14",
+											"description": "Req",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "34",
+											"description": "Req",
+											"type": "text"
+										},
+										{
+											"key": "store_id",
+											"value": "19",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "300",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "category_id",
+											"value": "34",
+											"description": "fillter by category ID",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 20:11:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 20:11:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"IPhone 14\",\n    \"category_id\": \"34\",\n    \"store_id\": \"19\",\n    \"price\": \"300\",\n    \"slug\": \"iphone-14\",\n    \"id\": 212,\n    \"image_url\": \"https://www.incathlab.com/images/products/default_product.png\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "price",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}products",
+							"host": [
+								"{{host}}products"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "price",
+											"value": "430",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "IPhone13",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "IPhone13",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}products/117",
+									"host": [
+										"{{host}}products"
+									],
+									"path": [
+										"117"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 20:49:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Nov 2022 20:49:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 117,\n    \"store_id\": 20,\n    \"category_id\": 33,\n    \"name\": \"IPhone13\",\n    \"slug\": \"IPhone13\",\n    \"description\": \"Et laborum aut facilis inventore quis minima consequatur tempora sed dolor aliquam soluta quam perspiciatis non deserunt excepturi.\",\n    \"price\": \"430\",\n    \"compare_price\": 763.4,\n    \"quantity\": 0,\n    \"options\": null,\n    \"rating\": 0,\n    \"featured\": 1,\n    \"status\": \"active\",\n    \"image_url\": \"https://via.placeholder.com/600x600.png/00aaee?text=delectus\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Create Access Token",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{api_key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "sika@sika.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "0597653251",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}auth/access-tokens",
+							"host": [
+								"{{host}}auth"
+							],
+							"path": [
+								"access-tokens"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Access Token Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "sika@sika.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "4353535",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}auth/access-tokens",
+									"host": [
+										"{{host}}auth"
+									],
+									"path": [
+										"access-tokens"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:15:29 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:15:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 0,\n    \"message\": \"Invalid credentials\"\n}"
+						},
+						{
+							"name": "Validation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "sika@sika.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "4353535",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}auth/access-tokens",
+									"host": [
+										"{{host}}auth"
+									],
+									"path": [
+										"access-tokens"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:16:15 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:16:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The email field is required. (and 1 more error)\",\n    \"errors\": {\n        \"email\": [\n            \"The email field is required.\"\n        ],\n        \"password\": [\n            \"The password field is required.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "logout with pairar token",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "sika@sika.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "0597653251",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}auth/access-tokens/3|7wbZtU3MHNowzYnd8ViXEhvIkzexiY5RRRGGhpI0",
+									"host": [
+										"{{host}}auth"
+									],
+									"path": [
+										"access-tokens",
+										"3|7wbZtU3MHNowzYnd8ViXEhvIkzexiY5RRRGGhpI0"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:56:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:56:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "sika@sika.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "0597653251",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}auth/access-tokens/",
+									"host": [
+										"{{host}}auth"
+									],
+									"path": [
+										"access-tokens",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 09:01:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 09:01:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 1,\n    \"token\": \"5|IEToBcrhqj4mhc7JXFdNYlFXWq7GmCcSuC1AWhV2\",\n    \"user\": {\n        \"id\": 4,\n        \"name\": \"Uriel Bergstrom\",\n        \"email\": \"sika@sika.com\",\n        \"email_verified_at\": \"2022-09-10T08:51:58.000000Z\",\n        \"phone_number\": null,\n        \"type\": \"admin\",\n        \"last_active_at\": \"2022-11-04 17:46:25\",\n        \"store_id\": 17,\n        \"created_at\": \"2022-09-10T08:51:58.000000Z\",\n        \"updated_at\": \"2022-11-04T15:46:25.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Current User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}auth/user",
+							"host": [
+								"{{host}}auth"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Current User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}user",
+									"host": [
+										"{{host}}user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:41:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Nov 2022 08:41:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"name\": \"Uriel Bergstrom\",\n    \"email\": \"sika@sika.com\",\n    \"email_verified_at\": \"2022-09-10T08:51:58.000000Z\",\n    \"phone_number\": null,\n    \"type\": \"admin\",\n    \"last_active_at\": \"2022-11-04 17:46:25\",\n    \"store_id\": 17,\n    \"created_at\": \"2022-09-10T08:51:58.000000Z\",\n    \"updated_at\": \"2022-11-04T15:46:25.000000Z\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

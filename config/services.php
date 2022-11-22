@@ -43,4 +43,8 @@ return [
         'redirect' => env('APP_URL') . '/auth/google/callback',
     ],
 
+    'weather'=>[
+        'api_key'=>env('WEATHER_API_KEY'),
+    ]
+
 ];

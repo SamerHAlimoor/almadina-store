@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\WeatherApiController;
 use App\Http\Controllers\Auth\SocialLoginController;
 use App\Http\Controllers\Front\AuthFortify\TwoFactorAuthentication;
 use App\Http\Controllers\Front\CartController;
@@ -30,6 +31,8 @@ Route::group([
     'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 
 ], function () {
+
+    Route::get('/weather', [WeatherApiController::class, 'weather'])->name('weatherCity');
 
     Route::get('/',  [HomeController::class, 'index'])->name('home_page');
     Route::get('/product', [ProductsController::class, 'index'])
