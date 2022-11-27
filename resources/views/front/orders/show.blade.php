@@ -11,7 +11,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-12">
                         <ul class="breadcrumb-nav">
-                            <li><a href="{{ route('home') }}"><i class="lni lni-home"></i> Home</a></li>
+                            <li><a href="{{ route('home_page') }}"><i class="lni lni-home"></i> Home</a></li>
                             <li><a href="#">Orders</a></li>
                             <li>Order # {{ $order->number }}</li>
                         </ul>
@@ -69,5 +69,6 @@
         }
         window.initMap = initMap;
     </script>
+
     <script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google.api_key') }}&callback=initMap&v=weekly" defer></script>
 </x-front-layout>
