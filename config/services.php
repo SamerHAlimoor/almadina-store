@@ -41,10 +41,11 @@ return [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect' => env('APP_URL') . '/auth/google/callback',
+        'api_key' => env('GOOGLE_MAP_API_KEY'),
     ],
 
-    'weather'=>[
-        'api_key'=>env('WEATHER_API_KEY'),
+    'weather' => [
+        'api_key' => env('WEATHER_API_KEY'),
     ]
 
 ];
