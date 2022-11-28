@@ -28,25 +28,26 @@
     </section>
     <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
     <script>
-        var map, marker;
-        // Enable pusher logging - don't include this in production
-        Pusher.logToConsole = true;
-        var pusher = new Pusher('9bbd1071bbb820b9aef1', {
-            cluster: 'ap2',
-            channelAuthorization: {
+  
+      // Enable pusher logging - don't include this in production
+      Pusher.logToConsole = true;
+  
+      var pusher = new Pusher('7c6af2b0bc7ec399cdbe', {
+        cluster: 'mt1',
+        channelAuthorization: {
                 endpoint: "/broadcasting/auth",
                 headers: { 
                     "X-CSRF-Token": "{{ csrf_token() }}"
                 }
-            }
-        });
-        var channel = pusher.subscribe('private-deliveries.{{ $order->id }}');
-        channel.bind('location-updated', function(data) {
-            marker.setPosition({
-                lat: Number(data.lat),
-                lng: Number(data.lng)
-            });
-        });
+             }
+                
+      });
+  
+      var channel = pusher.subscribe('private-deliveries.{{ $order->id }}');
+      channel.bind('location-updated', function(data) {
+        alert(JSON.stringify(data));
+      });
+   
     </script>
     <script>
         // Initialize and add the map
