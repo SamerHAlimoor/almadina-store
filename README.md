@@ -1,6 +1,8 @@
 
 <p align="center">
+    
 ## Admin Side
+    
 </p>
 
 ## Admin Login
@@ -32,7 +34,9 @@
 </p>
 
 <p align="center">
+    
 ## User Side
+    
 </p>
 
 ## Home User
