@@ -81,6 +81,7 @@ This application is designed to fit mid-companies. Also, the system contains of 
 - Cart User
 - Payment Succed
 - Product User
+- Firebase
 
 
 
