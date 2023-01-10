@@ -1,3 +1,7 @@
+
+<p align="center">
+## Admin Side
+</p>
 ## Admin Login
 <p align="center">
     <img src="https://github.com/SamerHAlimoor/almadina-store/blob/main/login_admin.png" width="100%" alt="Login Page"></a></p>
@@ -26,7 +30,9 @@
     <img src="https://github.com/SamerHAlimoor/almadina-store/blob/main/add_category_admin.png" width="100%" alt="Products"></a></p>
 </p>
 
-## User Part
+<p align="center">
+## User Side
+</p>
 ## Home User
 <p align="center">
     <img src="https://github.com/SamerHAlimoor/almadina-store/blob/main/home_user.png" width="100%" alt="home"></a></p>
