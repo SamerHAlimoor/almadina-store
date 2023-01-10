@@ -2,6 +2,7 @@
 <p align="center">
 ## Admin Side
 </p>
+
 ## Admin Login
 <p align="center">
     <img src="https://github.com/SamerHAlimoor/almadina-store/blob/main/login_admin.png" width="100%" alt="Login Page"></a></p>
@@ -33,6 +34,7 @@
 <p align="center">
 ## User Side
 </p>
+
 ## Home User
 <p align="center">
     <img src="https://github.com/SamerHAlimoor/almadina-store/blob/main/home_user.png" width="100%" alt="home"></a></p>
